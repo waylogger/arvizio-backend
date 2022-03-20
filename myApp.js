@@ -32,6 +32,7 @@ fastify.register(fastifyStatic, {
 
 // // app routes
 fastify.register(require("./routes"), { prefix: "api" });
+fastify.register(require("./routes/start"), { prefix: "/" });
 
 // start server listening
 const start = async () => {
