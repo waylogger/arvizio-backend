@@ -32,8 +32,8 @@ fastify.register(fastifyStatic, {
 
 // // app routes
 fastify.register(require("./routes"), { prefix: "api" });
-fastify.post("/", async (request, reply) => {
-  return { status: true, message: "/" };
+fastify.get("/", async (request, reply) => {
+  return { status: true, message: "good" };
 });
 
 // start server listening
